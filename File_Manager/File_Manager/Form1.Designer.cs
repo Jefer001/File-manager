@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menu = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
             seleccionarToolStripMenuItem = new ToolStripMenuItem();
@@ -39,7 +40,10 @@
             oscuroToolStripMenuItem = new ToolStripMenuItem();
             claroToolStripMenuItem = new ToolStripMenuItem();
             inicioToolStripMenuItem = new ToolStripMenuItem();
+            discUnid = new ToolStrip();
+            toolStripDropDownButton1 = new ToolStripDropDownButton();
             menu.SuspendLayout();
+            discUnid.SuspendLayout();
             SuspendLayout();
             // 
             // menu
@@ -92,19 +96,19 @@
             // 
             temaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { oscuroToolStripMenuItem, claroToolStripMenuItem });
             temaToolStripMenuItem.Name = "temaToolStripMenuItem";
-            temaToolStripMenuItem.Size = new Size(180, 22);
+            temaToolStripMenuItem.Size = new Size(102, 22);
             temaToolStripMenuItem.Text = "Tema";
             // 
             // oscuroToolStripMenuItem
             // 
             oscuroToolStripMenuItem.Name = "oscuroToolStripMenuItem";
-            oscuroToolStripMenuItem.Size = new Size(180, 22);
+            oscuroToolStripMenuItem.Size = new Size(112, 22);
             oscuroToolStripMenuItem.Text = "Oscuro";
             // 
             // claroToolStripMenuItem
             // 
             claroToolStripMenuItem.Name = "claroToolStripMenuItem";
-            claroToolStripMenuItem.Size = new Size(180, 22);
+            claroToolStripMenuItem.Size = new Size(112, 22);
             claroToolStripMenuItem.Text = "Claro";
             // 
             // inicioToolStripMenuItem
@@ -113,17 +117,38 @@
             inicioToolStripMenuItem.Size = new Size(48, 20);
             inicioToolStripMenuItem.Text = "Inicio";
             // 
+            // discUnid
+            // 
+            discUnid.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1 });
+            discUnid.Location = new Point(0, 24);
+            discUnid.Name = "discUnid";
+            discUnid.Size = new Size(909, 25);
+            discUnid.TabIndex = 1;
+            discUnid.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton1.Image = (Image)resources.GetObject("toolStripDropDownButton1.Image");
+            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Size = new Size(69, 22);
+            toolStripDropDownButton1.Text = "Unidades";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(909, 587);
+            Controls.Add(discUnid);
             Controls.Add(menu);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             menu.ResumeLayout(false);
             menu.PerformLayout();
+            discUnid.ResumeLayout(false);
+            discUnid.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +166,7 @@
         private ToolStripMenuItem oscuroToolStripMenuItem;
         private ToolStripMenuItem claroToolStripMenuItem;
         private ToolStripMenuItem inicioToolStripMenuItem;
+        private ToolStrip discUnid;
+        private ToolStripDropDownButton toolStripDropDownButton1;
     }
 }
