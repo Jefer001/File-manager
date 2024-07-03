@@ -42,6 +42,7 @@
             inicioToolStripMenuItem = new ToolStripMenuItem();
             discUnid = new ToolStrip();
             toolStripDropDownButton1 = new ToolStripDropDownButton();
+            treeView1 = new TreeView();
             menu.SuspendLayout();
             discUnid.SuspendLayout();
             SuspendLayout();
@@ -135,11 +136,19 @@
             toolStripDropDownButton1.Size = new Size(69, 22);
             toolStripDropDownButton1.Text = "Unidades";
             // 
+            // treeView1
+            // 
+            treeView1.Location = new Point(12, 52);
+            treeView1.Name = "treeView1";
+            treeView1.Size = new Size(241, 523);
+            treeView1.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(909, 587);
+            Controls.Add(treeView1);
             Controls.Add(discUnid);
             Controls.Add(menu);
             Name = "Form1";
@@ -168,5 +177,6 @@
         private ToolStripMenuItem inicioToolStripMenuItem;
         private ToolStrip discUnid;
         private ToolStripDropDownButton toolStripDropDownButton1;
+        private TreeView treeView1;
     }
 }
