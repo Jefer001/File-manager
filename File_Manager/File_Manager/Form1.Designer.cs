@@ -42,7 +42,7 @@
             inicioToolStripMenuItem = new ToolStripMenuItem();
             discUnid = new ToolStrip();
             toolStripDropDownButton1 = new ToolStripDropDownButton();
-            treeView1 = new TreeView();
+            tvFile = new TreeView();
             menu.SuspendLayout();
             discUnid.SuspendLayout();
             SuspendLayout();
@@ -97,20 +97,22 @@
             // 
             temaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { oscuroToolStripMenuItem, claroToolStripMenuItem });
             temaToolStripMenuItem.Name = "temaToolStripMenuItem";
-            temaToolStripMenuItem.Size = new Size(102, 22);
+            temaToolStripMenuItem.Size = new Size(180, 22);
             temaToolStripMenuItem.Text = "Tema";
             // 
             // oscuroToolStripMenuItem
             // 
             oscuroToolStripMenuItem.Name = "oscuroToolStripMenuItem";
-            oscuroToolStripMenuItem.Size = new Size(112, 22);
+            oscuroToolStripMenuItem.Size = new Size(180, 22);
             oscuroToolStripMenuItem.Text = "Oscuro";
+            oscuroToolStripMenuItem.Click += OscuroToolStripMenuItem_Click;
             // 
             // claroToolStripMenuItem
             // 
             claroToolStripMenuItem.Name = "claroToolStripMenuItem";
-            claroToolStripMenuItem.Size = new Size(112, 22);
+            claroToolStripMenuItem.Size = new Size(180, 22);
             claroToolStripMenuItem.Text = "Claro";
+            claroToolStripMenuItem.Click += ClaroToolStripMenuItem_Click;
             // 
             // inicioToolStripMenuItem
             // 
@@ -136,19 +138,20 @@
             toolStripDropDownButton1.Size = new Size(69, 22);
             toolStripDropDownButton1.Text = "Unidades";
             // 
-            // treeView1
+            // tvFile
             // 
-            treeView1.Location = new Point(12, 52);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(241, 523);
-            treeView1.TabIndex = 2;
+            tvFile.Dock = DockStyle.Left;
+            tvFile.Location = new Point(0, 49);
+            tvFile.Name = "tvFile";
+            tvFile.Size = new Size(241, 538);
+            tvFile.TabIndex = 2;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(909, 587);
-            Controls.Add(treeView1);
+            Controls.Add(tvFile);
             Controls.Add(discUnid);
             Controls.Add(menu);
             Name = "Form1";
@@ -177,6 +180,6 @@
         private ToolStripMenuItem inicioToolStripMenuItem;
         private ToolStrip discUnid;
         private ToolStripDropDownButton toolStripDropDownButton1;
-        private TreeView treeView1;
+        private TreeView tvFile;
     }
 }
